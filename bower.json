@@ -1,6 +1,7 @@
 {
 	"name": "ng-tags-input",
-	"version": "2.0.2a",
+	"version": "2.0.1a",
+	"author": "Alexis Ohayon",
 	"location": "https://github.com/alexisohayon/ngTagsInput",
 	"homepage": "http://mbenford.github.io/ngTagsInput",
 	"main": [
@@ -9,6 +10,7 @@
 	],
 	"description": "Tags input directive for AngularJS",
 	"dependencies": {
-		"angular": "~1.2.1"
+		"angular": "~1.2.1",
+		"takes": "~1.0"
 	}
 }
