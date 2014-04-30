@@ -10,7 +10,6 @@
 	],
 	"description": "Tags input directive for AngularJS",
 	"dependencies": {
-		"angular": "~1.2.1",
-		"takes": "~1.0"
+		"angular": "~1.2.1"
 	}
 }
