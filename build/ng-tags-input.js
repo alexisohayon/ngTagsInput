@@ -5,7 +5,7 @@
  * Copyright (c) 2013-2014 Michael Benford
  * License: MIT
  *
- * Generated at 2014-04-30 18:31:39 +0200
+ * Generated at 2014-04-30 18:32:04 +0200
  */
 (function() {
 'use strict';
@@ -769,7 +769,7 @@ tagsInput.run(["$templateCache", function($templateCache) {
   );
 
   $templateCache.put('ngTagsInput/auto-complete.html',
-    "<div class=\"autocomplete\" ng-show=\"suggestionList.visible\"><ul class=\"suggestion-list\"><li class=\"suggestion-item\" ng-repeat=\"item in suggestionList.items track by track(item)\" ng-class=\"{selected: item == suggestionList.selected}\" ng-click=\"addSuggestion()\" ng-mouseenter=\"suggestionList.select($index)\" ng-bind-html=\"highlight(item)\"></li></ul></div>"
+    "<div class=\"autocomplete\" ng-show=\"suggestionList.visible\"><ul class=\"suggestion-list\"><li class=\"suggestion-item\" ng-repeat=\"item in suggestionList.items track by track(item)\" ng-class=\"{selected: item == suggestionList.selected}\" ng-click=\"addSuggestion()\" ng-mouseenter=\"suggestionList.select($index)\" ng-bind-html=\"highlight(item)\">{{item}}</li></ul></div>"
   );
 }]);
 
