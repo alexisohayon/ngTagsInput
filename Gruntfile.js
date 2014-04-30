@@ -18,6 +18,7 @@ module.exports = function(grunt) {
                     'src/init.js',
                     'src/tags-input.js',
                     'src/auto-complete.js',
+                    'src/auto-complete-contact.js',
                     'src/transclude-append.js',
                     'src/autosize.js',
                     'src/configuration.js'
@@ -31,7 +32,7 @@ module.exports = function(grunt) {
                 outMin: 'build/<%= pkg.name %>.min.css'
             },
             html: {
-                src: ['templates/tags-input.html', 'templates/auto-complete.html'],
+                src: ['templates/tags-input.html', 'templates/auto-complete.html', 'templates/auto-complete-contact.html'],
                 out: 'tmp/templates.js'
             },
             zip: {

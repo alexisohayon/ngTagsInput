@@ -57,6 +57,19 @@
                      max-results-to-show="10">
       </auto-complete>
     </tags-input>
+	<tags-input name="tags" ng-init="tags3=[{email: 'item1'}, {email: 'item2'}, {email: 'item3'}]" ng-model="tags3" display-property="email"
+	          add-on-enter="{{addOnEnter}}"
+	          add-on-blur="true"
+	          placeholder="{{placeholder}}"
+	          remove-tag-symbol="{{removeTagSymbol}}"
+	          max-length="5"
+	          add-from-autocomplete-only="false">
+	  <auto-complete-contact source="loadItems3($query)"
+	                         debounce-delay="0"
+	                         min-length="1"
+	                         max-results-to-show="10">
+	  </auto-complete-contact>
+	</tags-input>
 
     <p>Valid: {{form.tags.$valid}}</p>
     <p>Errors: {{form.tags.$error}}</p>
@@ -102,7 +115,19 @@
                 var deferred = $q.defer();
                 deferred.resolve(['Item1', 'Item2', 'Item3', 'Item4', 'Item5']);
                 return deferred.promise;
-            }
+            };
+		    $scope.loadItems3 = function(query) {
+			    var deferred = $q.defer();
+			    deferred.resolve([
+				    {email: 'george@lucas.com', completeName: 'George Lucas'},
+				    {email: 'steven@spielberg.com', completeName: 'Steven Spielberg'},
+				    {email: 'john@cafe.com', completeName: 'John Cafe'},
+				    {email: 'jean@jacques.com', completeName: 'Jean Jacques'},
+				    {email: 'yeh@neh.meh', completeName: 'Yeh Neh'},
+				    {email: 'dont@haveaname.com'}
+			    ]);
+			    return deferred.promise;
+		    }
         })
         .directive('limitTags', function() {
           return {
