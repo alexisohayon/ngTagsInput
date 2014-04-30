@@ -5,7 +5,7 @@
  * Copyright (c) 2013-2014 Michael Benford
  * License: MIT
  *
- * Generated at 2014-04-30 20:11:20 +0200
+ * Generated at 2014-04-30 20:12:27 +0200
  */
 (function() {
 'use strict';
@@ -760,7 +760,7 @@ tagsInput.directive('autoCompleteContact', ["$document","$timeout","$sce","tagsI
 			};
 
 			scope.highlightContactName = function(item) {
-				var text = getItemText(item.completeName);
+				var text = item;
 				if (options.highlightMatchedText) {
 					text = replaceAll(text, encodeHTML(suggestionList.query), '<em>$&</em>');
 				}
@@ -1016,7 +1016,7 @@ tagsInput.run(["$templateCache", function($templateCache) {
   );
 
   $templateCache.put('ngTagsInput/auto-complete-contact.html',
-    "<div class=\"autocomplete\" ng-show=\"suggestionList.visible\"><ul class=\"suggestion-list\"><li class=\"suggestion-item\" ng-repeat=\"item in suggestionList.items track by track(item)\" ng-class=\"{selected: item == suggestionList.selected}\" ng-click=\"addSuggestion()\" ng-mouseenter=\"suggestionList.select($index)\"><div></div><div ng-bind-html=\"highlight(item)\"></div><div ng-bind-html=\"highlightContact(item)\"></div></li></ul></div>"
+    "<div class=\"autocomplete\" ng-show=\"suggestionList.visible\"><ul class=\"suggestion-list\"><li class=\"suggestion-item\" ng-repeat=\"item in suggestionList.items track by track(item)\" ng-class=\"{selected: item == suggestionList.selected}\" ng-click=\"addSuggestion()\" ng-mouseenter=\"suggestionList.select($index)\"><div></div><div ng-bind-html=\"highlight(item)\"></div><div ng-bind-html=\"highlightContactName(item.completeName)\"></div></li></ul></div>"
   );
 }]);
 
