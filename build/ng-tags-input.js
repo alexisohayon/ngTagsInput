@@ -5,7 +5,7 @@
  * Copyright (c) 2013-2014 Michael Benford
  * License: MIT
  *
- * Generated at 2014-04-30 20:06:42 +0200
+ * Generated at 2014-04-30 20:11:20 +0200
  */
 (function() {
 'use strict';
@@ -759,14 +759,12 @@ tagsInput.directive('autoCompleteContact', ["$document","$timeout","$sce","tagsI
 				return $sce.trustAsHtml(text);
 			};
 
-			scope.highlightContact = function(item) {
-				if (item.completeName) {
-					var text = getItemText(item.completeName);
-					if (options.highlightMatchedText) {
-						text = replaceAll(text, encodeHTML(suggestionList.query), '<em>$&</em>');
-					}
-					return $sce.trustAsHtml(text);
+			scope.highlightContactName = function(item) {
+				var text = getItemText(item.completeName);
+				if (options.highlightMatchedText) {
+					text = replaceAll(text, encodeHTML(suggestionList.query), '<em>$&</em>');
 				}
+				return $sce.trustAsHtml(text);
 			};
 
 			scope.track = function(item) {
