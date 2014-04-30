@@ -249,7 +249,7 @@ module.exports = function(grunt) {
                 command: [
                     'git add .',
                     'git commit -m "chore(release): Release v<%= pkg.version %>"',
-                    'git tag -a v<%= pkg.version %> -m "v<%= pkg.version %>"',
+                    'git tag -a v<%= pkg.version %> -m "v<%= pkg.version %>"'
                 ].join('&&'),
                 options: {
                     stdout: true
