@@ -163,10 +163,6 @@ tagsInput.directive('autoCompleteContact', function($document, $timeout, $sce, t
 					}
 					return $sce.trustAsHtml(text);
 				}
-				else {
-					text = 'Not available';
-					return $sce.trustAsHtml(text);
-				}
 			};
 
 			scope.track = function(item) {
