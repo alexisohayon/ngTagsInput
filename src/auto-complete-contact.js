@@ -155,11 +155,16 @@ tagsInput.directive('autoCompleteContact', function($document, $timeout, $sce, t
 			};
 
 			scope.highlightContactName = function(item) {
+				var text = '';
 				if(item) {
-					var text = item;
+					text = item;
 					if (options.highlightMatchedText) {
 						text = replaceAll(text, encodeHTML(suggestionList.query), '<em>$&</em>');
 					}
+					return $sce.trustAsHtml(text);
+				}
+				else {
+					text = 'Not available';
 					return $sce.trustAsHtml(text);
 				}
 			};
