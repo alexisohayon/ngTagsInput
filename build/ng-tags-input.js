@@ -5,7 +5,7 @@
  * Copyright (c) 2013-2014 Michael Benford
  * License: MIT
  *
- * Generated at 2014-05-01 02:23:32 +0200
+ * Generated at 2014-05-01 02:50:08 +0200
  */
 (function() {
 'use strict';
@@ -1019,7 +1019,7 @@ tagsInput.run(["$templateCache", function($templateCache) {
   );
 
   $templateCache.put('ngTagsInput/auto-complete-contact.html',
-    "<div class=\"autocomplete\" ng-show=\"suggestionList.visible\"><ul class=\"suggestion-list\"><li class=\"suggestion-item\" ng-repeat=\"item in suggestionList.items track by track(item)\" ng-class=\"{selected: item == suggestionList.selected}\" ng-click=\"addSuggestion()\" ng-mouseenter=\"suggestionList.select($index)\"><div class=\"contact-picture\" back-img=\"{{item.picture}}\"></div><div class=\"contact-name\" ng-bind-html=\"highlightContactName(item.completeName)\"></div><div class=\"contact-mail\" ng-bind-html=\"highlight(item)\"></div></li></ul></div>"
+    "<div class=\"autocomplete\" ng-show=\"suggestionList.visible\"><ul class=\"suggestion-list\"><li class=\"suggestion-item\" ng-repeat=\"item in suggestionList.items track by track(item)\" ng-class=\"{selected: item == suggestionList.selected}\" ng-click=\"addSuggestion()\" ng-mouseenter=\"suggestionList.select($index)\"><div class=\"contact-picture\" back-img=\"{{item.picture}}\"></div><div class=\"contact-informations\"><div class=\"name\" ng-bind-html=\"highlightContactName(item.completeName)\"></div><div class=\"mail\" ng-bind-html=\"highlight(item)\"></div></div></li></ul></div>"
   );
 }]);
 
